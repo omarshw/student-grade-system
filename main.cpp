@@ -27,22 +27,25 @@ void DisplayGrades(float* grades, int size) {
 }
 
 int main() {
-    string StudentID;
-
-    int NumberOfSubjects;
+    int NumberOfSubjects, StudentID;
 
     cout << "Enter Student ID: ";
     cin >> StudentID;
+    
+    if (cin.fail()) { cout << "Please input a valid number." << endl; return 0; }
 
     cout << "Enter Number of Subjects: ";
     cin >> NumberOfSubjects;
 
-    float grades[100];
+    if (cin.fail()) { cout << "Please input a valid number." << endl; return 0; }
 
+    float grades[100];
+    
     for (int i = 0; i < NumberOfSubjects; i++) {
         cout << "Enter Grade for Subject " << i + 1 << ": ";
 
         cin >> grades[i];
+        if (cin.fail()) { cout << "Please input a valid number." << endl; return 0; }
     }
 
     float average = CalculateAverage(grades, NumberOfSubjects);
