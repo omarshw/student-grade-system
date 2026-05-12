@@ -22,11 +22,7 @@ void DisplayGrades(float* grades, int size) {
 
     for (int i = 0; i < size; i++) {
 
-        cout << "Subject "
-             << i + 1
-             << ": "
-             << *(grades + i)
-             << endl;
+        cout << "Subject " << i + 1 << ": " << *(grades + i) << endl;
     }
 }
 
@@ -44,9 +40,7 @@ int main() {
     float grades[100];
 
     for (int i = 0; i < NumberOfSubjects; i++) {
-        cout << "Enter Grade for Subject "
-             << i + 1
-             << ": ";
+        cout << "Enter Grade for Subject " << i + 1 << ": ";
 
         cin >> grades[i];
     }
@@ -54,9 +48,10 @@ int main() {
     float average = CalculateAverage(grades, NumberOfSubjects);
     float gpa = CalculateGPA(average);
 
-    cout << "\n========== STUDENT REPORT ==========\n";
+    cout << "\n========== STUDENT REPORT ==========" << endl;
 
     cout << "Student ID: " << StudentID << endl;
+
     if (gpa > 2)
         cout << "Status: Passing" << endl;
     else
@@ -68,7 +63,7 @@ int main() {
     cout << "GPA: " << gpa << endl;
 
 
-    cout << "====================================\n";
+    cout << "====================================";
 
     return 0;
 }
