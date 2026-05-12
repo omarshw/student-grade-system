@@ -22,7 +22,7 @@ void DisplayGrades(float* grades, int size) {
 
     for (int i = 0; i < size; i++) {
 
-        cout << "Subject " << i + 1 << ": " << *(grades + i) << endl;
+        cout << "Subject " << i + 1 << ": " << *(grades + i) << "/100" << endl;
     }
 }
 
@@ -66,7 +66,9 @@ int main() {
     cout << "GPA: " << gpa << endl;
 
 
-    cout << "====================================";
+    cout << "===================================="<<endl;
+
+    system("pause");
 
     return 0;
 }
